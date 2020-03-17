@@ -1,7 +1,7 @@
 ---
 title: "Welcome to JaehoBe!"
 date: 2020-03-17 08:26:28 -0400
-categories: For-Data-INcubator updates
+categories: For-Data-Incubator updates
 ---
 
 I will analyze the housing policy impact on housing prices in Seoul, South Korea.
