@@ -36,6 +36,7 @@ Current Korean government, especially the president Moon, Jaein, considers this 
 
 Among 25 Gus, 11 Gus are under the LTV limits. So, simplyfy the above graph by dividing Gus into Restricted areas and unrestricted areas.
 
+![targetplot](https://user-images.githubusercontent.com/62204139/79161081-b9d8a600-7d8f-11ea-8529-d5b0a781cf25.png)
 
 
 
