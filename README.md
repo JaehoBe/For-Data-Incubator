@@ -23,6 +23,8 @@ I will post;
 
 **3. Data** 
 
+**3-1. Apartment prices in Seoul**
+
 I obtain apartment transaction information from Open Data Portal (https://www.data.go.kr/) using personal API and python programming. In the webpage, Korean government provide all types of housing transaction data from January 2006 to now. Below is the part of the data after some cleaning. In the data, apartment name (apt_name), area of unit (area), price of unit (price), address of the apartment (address), coordinates and some other information are included. Because the price is normial, I also collect the Apartment Price Index provided by the KB Bank (https://onland.kbstar.com/quics?page=okbland&QSL=F) to calculate adjusted housing price (price index in 2012 December = 100) so that the prices over time can be comparable across the spaces and over the different time period. Then I calculate adjusted price per square meter (adjusted price / area). I will call this as unit price for the remaining article. Since the price is Korean won, I have to convert won to USD. 1 USD for today (2020-04-13) is around 1,200 Korean won, but for simplicity, I set 1 USD to 1,000 won.
 
 ![df](https://user-images.githubusercontent.com/62204139/79158997-281b6980-7d8c-11ea-85e7-6fe1eb551217.png)
@@ -34,7 +36,10 @@ In general, the apartment housing price in Seoul increases over time. The price 
 
 Current Korean government, especially the president Moon, Jaein, considers this is a seious problem. The government argues that the high price differences across the Gus are mainly due to speculation and to fight speculation it the Korean government adopt a number of measures such as 2017 Housing Market Stability Measures (so-called 8.2 measures). The measures starts from Auguest 2nd, and it includes policy that restrict the Loan-to-Value (LTV limits) when households purchases apartment housing in 11 Gus (Gangnam-Gu, Seocho-Gu, Songpa-Gu, and 8 more).
 
-Among 25 Gus, 11 Gus are under the LTV limits. So, simplyfy the above graph by dividing Gus into Restricted areas and unrestricted areas.
+**3-2. Apartment prices in Seoul: restricted and unrestricted areas**
+
+
+Among 25 Gus, 11 Gus are under the LTV limits. So, simplyfy the above graph by dividing Gus into Restricted areas and unrestricted areas. In graphs, 0 is for unit price in unrestricted areas (14 Gus) and 1 is for unit price in restricted areas (11 Gus). One thing that catch my eyes is that the price increases in restricted areas seems to be greater than the changes in unrestricted areas.
 
 ![targetplot](https://user-images.githubusercontent.com/62204139/79161081-b9d8a600-7d8f-11ea-8529-d5b0a781cf25.png)
 
