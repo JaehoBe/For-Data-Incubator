@@ -16,7 +16,7 @@ I will post;
 
 
 
-1. Intorduction
+** **1. Intorduction
 
 
 2. Brief information about housing market in Seoul, South Korea
