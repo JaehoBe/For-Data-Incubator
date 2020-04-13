@@ -23,6 +23,8 @@ I will post;
 
 I get the Apartment transactoin price from 2006 Januray to 2019 December from Open Data Portal (https://www.data.go.kr/) using personal API and python programming. Below is the part of the data, and in the data, I have apartment name (apt_name), area of unit (area), price of unit (price), address of the apartment (address), coordinates and some other information. I also collect the Apartment price index provided by the KB Bank (https://onland.kbstar.com/quics?page=okbland&QSL=F) and I calculate the adjusted housing price so that the prices over time can be comparable across different time period. 
 
+![df](https://user-images.githubusercontent.com/62204139/79158997-281b6980-7d8c-11ea-85e7-6fe1eb551217.png)
+
 
 
 Apartment housing price in Seoul increases over time. The price in several Gus are especially high compared to the rest of the Gus. For example, when we look at the price in 2016 January, the price in Gangman-Gu is 
