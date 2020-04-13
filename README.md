@@ -16,11 +16,12 @@ I will post;
 
 
 
-**1. Intorduction
+**1. Intorduction**
 
 
-2. Brief information about housing market in Seoul, South Korea
+**2. Brief information about housing market in Seoul, South Korea**
 
+**3. Data**
 I get the Apartment transactoin price from 2006 Januray to 2019 December from Open Data Portal (https://www.data.go.kr/) using personal API and python programming. Below is the part of the data, and in the data, I have apartment name (apt_name), area of unit (area), price of unit (price), address of the apartment (address), coordinates and some other information. I also collect the Apartment price index provided by the KB Bank (https://onland.kbstar.com/quics?page=okbland&QSL=F) and I calculate the adjusted housing price so that the prices over time can be comparable across different time period. 
 
 ![df](https://user-images.githubusercontent.com/62204139/79158997-281b6980-7d8c-11ea-85e7-6fe1eb551217.png)
