@@ -16,4 +16,10 @@ I will post;
 
 
 
+1. Intorduction
+
+
+2. Brief information about housing market in Seoul, South Korea
+![testplot](https://user-images.githubusercontent.com/62204139/79156383-a295ba80-7d87-11ea-8336-f818b9397e67.png)
+
 
