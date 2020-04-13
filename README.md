@@ -43,6 +43,10 @@ Among 25 Gus, 11 Gus are under the LTV limits. So, simplyfy the above graph by d
 
 ![targetplot](https://user-images.githubusercontent.com/62204139/79161081-b9d8a600-7d8f-11ea-8529-d5b0a781cf25.png)
 
+According to the Economics Theory, the price of commodity increases when the demand of good increases while the supply of good is fixed, or when the demand is fixed and supply is reduced (of course, price can also increase when both changes, too). Unfortunately, there is not much empty spaces in Seoul for Apartment housing consturction. Also, Korean government strictly restric the new construction of apartment (demolish old short apartment building and construct new tall apartment building). So I can consider the supply of apartment is fixed. 
+
+The government may be right: the price increases in certain areas is because of specualtion. And the government restrict the LTV for potential buyers of apartment in target areas. This may can decrease the demand by potential buyers. However, this policy can also be considered a signal that the apartment in these restricted areas will still be valuable in th future. If the share of potential buyers who can affort the apartment with cash is greater than the potential buyers who want to buy using LTV, then this policy still attract the buyers. At least, the graph shows the policy might ineffective sicne the price increases in the target areas is greater than the other.
+
 
 
 
