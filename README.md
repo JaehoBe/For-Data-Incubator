@@ -2,7 +2,7 @@
 
 This post introduces my analysis on the impact of housing policy on apartment housing prices in Seoul, South Korea.
 
-I will post; 
+During the camp (if I can successfully being accepted, and get a scholarship) I will post; 
 
 1) python code for collection of apartment housing transaction data from the Korean government webpage (data.co.kr)
 
@@ -15,15 +15,27 @@ I will post;
 6) results and conclusion.
 
 
+For now, I will describe the general idea about the project. 
+One thing that I want to share before starting the writing is that, since I have been trained as an economist who needs to present a study outcome that are new (from the perspective of academia), my analysis is focused on to enhance the knowledge about the housing policy impact on housing prices. In fact, one of my personal question is, "How different are the data scientists and economists?" They both use data and I guess most of the time they use the same data in their job. 
+
+As far as I understand, data scientiest are people who studies statistics, or computer science and they are interested in predicition. Economists are interested in understanding socail issues using economics theory and econometrics tool. I think one of the difference between the two is, economists try to justify their model choices using economic theory. I am not sure how data scientiests do to justify their model and this is something that I want to know more from the camp.
+
+Anyway, let's get started!
+
 
 **1. Intorduction**
 
+Understanding determinants of housing prices is one of the popular astudy areas in economics. Acrroding to the economic theory, the housing price is determined by the supply and demand of housing. In some counties, such as South Korea, the government sometimes involves to the housing market since housing is directly affect the quality of life or even for the survival. So, the housing price is also affected by the policy.
 
-**2. Brief information about housing market in Seoul, South Korea**
+In general, it is impossible to dierectl estimate the replationship between price and quantity because they both are determined at the same time. However, some econometric approaches allow economists to identify the determiants of housing prices; using instrument variable, or using hedonic price approach. Among these two approaches, there exists numerous studies that employ hedonic price approach for its simplicity compared to the other approach (finding a good instrument is difficult), and for its simplicity for interpretation. 
 
-**3. Data** 
+In this project, I basically will use hedonic price approach. That is, the housing price is determined by its characteristics such how big it is, how old is the building, where it locates, whether it is a large size apartment complex or not, which the floor the unit is in. Then, I include policy impact on housing price. One thing to note here is that the policy target apartments are selected. That is, there could be a sample selection bias if I fail to address this issue. For now, 
+- I am thinking to use panel regression using the apartments that lies within some distance from boundary that seperate areas into target area (treated) or not (control). So, in some sense, my analysis tries to mimic quasi-experimental approach. 
+- Another approach I am thinking is to use propensity score matching to construct comparable apartments that locate in policy target areas and that locate outside the target area.
 
-**3-1. Apartment prices in Seoul**
+**2. Data** 
+
+**2-1. Apartment prices in Seoul**
 
 I obtain apartment transaction information from Open Data Portal (https://www.data.go.kr/) using personal API and python programming. In the webpage, Korean government provide all types of housing transaction data from January 2006 to now. Below is the part of the data after some cleaning. In the data, apartment name (apt_name), area of unit (area), price of unit (price), address of the apartment (address), coordinates and some other information are included. Because the price is normial, I also collect the Apartment Price Index provided by the KB Bank (https://onland.kbstar.com/quics?page=okbland&QSL=F) to calculate adjusted housing price (price index in 2012 December = 100) so that the prices over time can be comparable across the spaces and over the different time period. Then I calculate adjusted price per square meter (adjusted price / area). I will call this as unit price for the remaining article. Since the price is Korean won, I have to convert won to USD. 1 USD for today (2020-04-13) is around 1,200 Korean won, but for simplicity, I set 1 USD to 1,000 won.
 
@@ -36,7 +48,7 @@ In general, the apartment housing price in Seoul increases over time. The price 
 
 Current Korean government, especially the president Moon, Jaein, considers this is a seious problem. The government argues that the high price differences across the Gus are mainly due to speculation and to fight speculation it the Korean government adopt a number of measures such as 2017 Housing Market Stability Measures (so-called 8.2 measures). The measures starts from Auguest 2nd, and it includes policy that restrict the Loan-to-Value (LTV limits) when households purchases apartment housing in 11 Gus (Gangnam-Gu, Seocho-Gu, Songpa-Gu, and 8 more).
 
-**3-2. Apartment prices in Seoul: restricted and unrestricted areas**
+**2-2. Apartment prices in Seoul: restricted and unrestricted areas**
 
 
 Among 25 Gus, 11 Gus are under the LTV limits. So, simplyfy the above graph by dividing Gus into Restricted areas and unrestricted areas. In graphs, 0 is for unit price in unrestricted areas (14 Gus) and 1 is for unit price in restricted areas (11 Gus). One thing that catch my eyes is that the price increases in restricted areas seems to be greater than the changes in unrestricted areas after the policy in 2017 August.
